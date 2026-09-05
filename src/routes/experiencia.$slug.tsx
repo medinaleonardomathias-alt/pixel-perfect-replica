@@ -149,7 +149,8 @@ function ExperienceDetail() {
           </h2>
           <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {experience.auditKpis.map((k, i) => {
-              const Icon = AUDIT_ICONS[i % AUDIT_ICONS.length];
+              const Icon = AUDIT_ICONS[i % AUDIT_ICONS.length] ?? Footprints;
+
               return (
                 <div key={k.label}>
                   <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
